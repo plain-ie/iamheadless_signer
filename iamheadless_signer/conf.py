@@ -1,13 +1,11 @@
 from django.conf import settings as dj_settings
 
-from iamheadless_projects.conf import settings as iamheadless_projects_settings
-
-from .apps import IamheadlessSignerConfig
+from .apps import IamheadlessSignerConfig as AppConfig
 
 
 class Settings:
 
-    APP_NAME = IamheadlessSignerConfig.name
+    APP_NAME = AppConfig.name
     VAR_PREFIX = APP_NAME.upper()
 
     VAR_KEY_MODEL_CLASS = f'{VAR_PREFIX}_KEY_MODEL_CLASS'
